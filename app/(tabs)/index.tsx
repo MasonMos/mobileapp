@@ -1,7 +1,6 @@
+import React from 'react';
 import { Image, StyleSheet, Platform, TouchableOpacity } from 'react-native';
-
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
+import { Link } from 'expo-router';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
@@ -15,28 +14,24 @@ export default function HomeScreen() {
         </ThemedView>
       </ThemedView>
       
-      <TouchableOpacity
-      style={{ backgroundColor: '#007bff',
-      paddingVertical: 12,
-      paddingHorizontal: 20,
-      borderRadius: 8,
-      margin: 50,
-      shadowColor: '#000',
-      shadowOffset: { width: 0, height: 2 },
-      shadowOpacity: 0.3,
-      shadowRadius: 4,
-      elevation: 5,
-    }}
-      >
-        <ThemedText type="defaultSemiBold">Explore Carleton!</ThemedText>
-      </TouchableOpacity>
-      
-
-      
-      
-      
+      <Link href="/explore" asChild>
+        <TouchableOpacity
+          style={{ backgroundColor: '#007bff',
+            paddingVertical: 12,
+            paddingHorizontal: 20,
+            borderRadius: 8,
+            margin: 50,
+            shadowColor: '#000',
+            shadowOffset: { width: 0, height: 2 },
+            shadowOpacity: 0.3,
+            shadowRadius: 4,
+            elevation: 5,
+          }}
+        >
+          <ThemedText type="defaultSemiBold">Explore Carleton!</ThemedText>
+        </TouchableOpacity>
+      </Link>
       </>
-
   );
 }
 
